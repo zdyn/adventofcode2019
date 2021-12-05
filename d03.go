@@ -36,7 +36,6 @@ func main() {
 			wires[i] = append(wires[i], segment)
 		}
 	}
-
 	points := make(map[Point]int)
 	minDist := 0
 	minSteps := 0

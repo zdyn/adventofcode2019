@@ -14,7 +14,6 @@ func main() {
 		code, _ := strconv.Atoi(n)
 		codes[i] = code
 	}
-
 	ic := NewIntcode(codes)
 	for ic.state != DONE {
 		ic.Run()
@@ -25,7 +24,6 @@ func main() {
 			fmt.Println(ic.output)
 		}
 	}
-
 	ic = NewIntcode(codes)
 	for ic.state != DONE {
 		ic.Run()

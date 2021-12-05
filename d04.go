@@ -32,7 +32,6 @@ func main() {
 	bounds := strings.Split(strings.TrimSpace(string(input)), "-")
 	low, _ := strconv.Atoi(bounds[0])
 	high, _ := strconv.Atoi(bounds[1])
-
 	valid1 := 0
 	valid2 := 0
 	for p := low; p <= high; p++ {
