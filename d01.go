@@ -23,10 +23,7 @@ func fuelForMassAndFuel(mass int) int {
 func main() {
 	input, _ := ioutil.ReadFile("d01.txt")
 	var modules []int
-	for _, n := range strings.Split(string(input), "\n") {
-		if n == "" {
-			continue
-		}
+	for _, n := range strings.Split(strings.TrimSpace(string(input)), "\n") {
 		module, _ := strconv.Atoi(n)
 		modules = append(modules, module)
 	}

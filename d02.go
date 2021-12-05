@@ -10,7 +10,7 @@ import (
 func main() {
 	input, _ := ioutil.ReadFile("d02.txt")
 	codes := make(map[int]int)
-	for i, n := range strings.Split(string(input), ",") {
+	for i, n := range strings.Split(strings.TrimSpace(string(input)), ",") {
 		code, _ := strconv.Atoi(n)
 		codes[i] = code
 	}

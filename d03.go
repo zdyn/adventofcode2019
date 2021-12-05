@@ -30,10 +30,7 @@ func parseSegment(segment string) (x, y, dist int) {
 func main() {
 	input, _ := ioutil.ReadFile("d03.txt")
 	var wires [][]string
-	for i, wire := range strings.Split(string(input), "\n") {
-		if wire == "" {
-			continue
-		}
+	for i, wire := range strings.Split(strings.TrimSpace(string(input)), "\n") {
 		wires = append(wires, make([]string, 0))
 		for _, segment := range strings.Split(wire, ",") {
 			wires[i] = append(wires[i], segment)
