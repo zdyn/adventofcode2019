@@ -14,16 +14,6 @@ func main() {
 		code, _ := strconv.Atoi(n)
 		codes[i] = code
 	}
-
-	ic := NewIntcode(codes)
-	ic.codes[1] = 12
-	ic.codes[2] = 2
-	for ic.state != DONE {
-		ic.Run()
-	}
-	fmt.Println(ic.codes[0])
-
-outer:
 	for n := 0; n <= 99; n++ {
 		for v := 0; v <= 99; v++ {
 			ic := NewIntcode(codes)
@@ -32,9 +22,11 @@ outer:
 			for ic.state != DONE {
 				ic.Run()
 			}
+			if n == 12 && v == 2 {
+				fmt.Println(ic.codes[0])
+			}
 			if ic.codes[0] == 19690720 {
 				fmt.Println(100*n + v)
-				break outer
 			}
 		}
 	}
