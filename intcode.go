@@ -47,7 +47,6 @@ func (ic *Intcode) Index(arg int) int {
 func (ic *Intcode) Input(val int) {
 	ic.codes[ic.Index(1)] = val
 	ic.pos += 2
-	ic.Run()
 }
 
 func (ic *Intcode) Run() {
