@@ -27,16 +27,12 @@ func main() {
 		module, _ := strconv.Atoi(n)
 		modules = append(modules, module)
 	}
-
 	fuel := 0
+	fuel2 := 0
 	for _, module := range modules {
 		fuel += fuelForMass(module)
+		fuel2 += fuelForMassAndFuel(module)
 	}
 	fmt.Println(fuel)
-
-	fuel = 0
-	for _, module := range modules {
-		fuel += fuelForMassAndFuel(module)
-	}
-	fmt.Println(fuel)
+	fmt.Println(fuel2)
 }
