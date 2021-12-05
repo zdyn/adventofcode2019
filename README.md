@@ -1,3 +1,3 @@
 [Go](https://go.dev) required.
 
-    go run dXX.go
+    go run dXX.go intcode.go
